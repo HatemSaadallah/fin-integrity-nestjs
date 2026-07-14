@@ -1,0 +1,60 @@
+{
+  "name": "@fin-integrity/nestjs",
+  "version": "0.1.0",
+  "description": "NestJS module for fin-integrity — inject the reconciliation client via Nest DI.",
+  "keywords": [
+    "fin-integrity",
+    "reconciliation",
+    "nestjs",
+    "stripe",
+    "fintech",
+    "payments"
+  ],
+  "license": "MIT",
+  "author": "fin-integrity",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HatemSaadallah/fin-integrity-nestjs.git"
+  },
+  "homepage": "https://github.com/HatemSaadallah/fin-integrity-nestjs#readme",
+  "bugs": {
+    "url": "https://github.com/HatemSaadallah/fin-integrity-nestjs/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@fin-integrity/node": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": ">=9"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.4.0",
+    "@types/node": "^20.14.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
